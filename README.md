@@ -40,16 +40,7 @@ This connector periodically downloads domain zone files (`.ru` and `.su`) from t
 
 ## Building the Docker Image
 
-1. Clone or create the project folder with the following structure:
-.
-├── Dockerfile
-├── docker-compose.yml
-├── README.md
-└── src/
-├── connector.py
-└── requirements.txt
-
-2. Build the image:
+Build the image:
 
 ```bash
 docker build -t connector-cybersquatting:latest .
