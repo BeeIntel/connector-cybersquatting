@@ -11,9 +11,10 @@ services:
       - CONNECTOR_TYPE=EXTERNAL_IMPORT
       - CONNECTOR_CONFIDENCE_LEVEL=75
       - CONNECTOR_LOG_LEVEL=info
-      - TARGET_SUBSTRINGS=keywords_for_search
-      - EXCLUDE_SUBSTRINGS=keywords_for_exclude
-      - SCHEDULE_INTERVAL=interval_in_seconds
+      - TARGET_SUBSTRINGS=                            #keywords context for searching
+      - EXCLUDE_SUBSTRINGS=                           #keywords for exclude
+      - SCHEDULE_INTERVAL=86400                       #Interval in seconds, domain zones are updated once every 24 hours.
+      - OPENCTI_TLS_REJECT_UNAUTHORIZED=true
     restart: always
     depends_on:
       opencti:
