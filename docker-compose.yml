@@ -1,7 +1,7 @@
 version: "3"
 services:
   connector-cybersquatting:
-    image: connector-cybersquatting:latest
+    image: beeintelligence/connector-cybersquatting:latest
     environment:
       - OPENCTI_URL=ChangeMe
       - OPENCTI_TOKEN=ChangeMe
@@ -14,9 +14,6 @@ services:
       - TARGET_SUBSTRINGS=keywords_for_search
       - EXCLUDE_SUBSTRINGS=keywords_for_exclude
       - SCHEDULE_INTERVAL=interval_in_seconds
-      - HTTP_PROXY=${HTTP_PROXY}
-      - HTTPS_PROXY=${HTTP_PROXY}
-      - NO_PROXY=opencti,rabbitmq
     restart: always
     depends_on:
       opencti:
